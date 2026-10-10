@@ -84,6 +84,27 @@ Shortcuts: the *Insert Text*, *Append Text*, *Get Document Text*, *Find and Repl
 - [`APPSTORE.md`](APPSTORE.md): notes for shipping to the Mac App Store
 - [`AGENTS.md`](AGENTS.md): orientation for AI coding agents
 
+## Community
+
+- 💬 Questions and ideas: [GitHub Discussions](https://github.com/uaedoom/wordcraft/discussions)
+- 🐛 Bugs: [open an issue](https://github.com/uaedoom/wordcraft/issues/new/choose)
+- 🌱 New here? Look for [good first issues](https://github.com/uaedoom/wordcraft/labels/good%20first%20issue) and read [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- 🌍 Translations are very welcome (copy `WordMac/ar.lproj`)
+
+## Roadmap
+
+- [x] Core editor, page layout, styles, tables, equations, review, citations, mail merge, `.docx`, Arabic/RTL
+- [ ] Universal (Apple silicon + Intel) build and Developer ID notarization
+- [ ] Drag-to-resize table columns
+- [ ] Tracked formatting changes
+- [ ] Charts and SmartArt import
+- [ ] More UI languages
+- [ ] Mac App Store release
+
+## Star history
+
+[![Star History Chart](https://api.star-history.com/svg?repos=uaedoom/wordcraft&type=Date)](https://star-history.com/#uaedoom/wordcraft&Date)
+
 ## License
 
 Dual-licensed under either of
