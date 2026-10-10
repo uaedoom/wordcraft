@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WordCraft — the free, open-source word processor for Mac</title>
+<meta name="description" content="WordCraft is a free, open-source word processor for macOS with real page layout, styles, tables, equations, track changes, .docx support and Arabic right-to-left.">
+<meta property="og:title" content="WordCraft — free, open-source word processor for Mac">
+<meta property="og:description" content="Real pages, styles, tables, equations, track changes, .docx and Arabic RTL. Free download for macOS 15+.">
+<meta property="og:image" content="https://uaedoom.github.io/wordcraft/images/banner.jpg">
+<link rel="icon" href="assets/icon.png">
+<style>
+:root{--bg:#f6f9ff;--card:#fff;--ink:#10224a;--mut:#51648c;--acc:#2f7bff;--acc2:#5aa9ff;--line:#dfe8fa;--dark:#07102b}
+@media (prefers-color-scheme:dark){:root{--bg:#070d22;--card:#0f1a3a;--ink:#eaf1ff;--mut:#9fb3dc;--line:#1f2f5c}}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font-family:-apple-system,"SF Pro Display","Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--acc)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+nav .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:inherit;text-decoration:none}
+nav .brand img{width:34px}
+nav .links a{margin-left:22px;color:var(--mut);text-decoration:none;font-weight:600}
+.hero{background:radial-gradient(1200px 500px at 70% -10%,rgba(47,123,255,.35),transparent),linear-gradient(180deg,#0a1538,#0d1f55);color:#fff;border-radius:0 0 36px 36px;padding-bottom:70px}
+.hero nav a{color:#fff}.hero nav .links a{color:#c9d8ff}
+.hero .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center;padding-top:30px}
+.hero img.app{width:128px;filter:drop-shadow(0 14px 28px rgba(0,0,0,.5))}
+h1{font-size:clamp(44px,7vw,84px);letter-spacing:-2px;line-height:1;margin:16px 0 12px;font-weight:800}
+h1 span{background:linear-gradient(90deg,#7fc4ff,#f3d27a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{font-size:clamp(19px,2.4vw,26px);color:#d3e1ff;max-width:520px}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:14px;font-weight:700;font-size:19px;text-decoration:none}
+.btn.p{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#fff;box-shadow:0 10px 30px rgba(47,123,255,.55)}
+.btn.s{border:1px solid rgba(255,255,255,.35);color:#fff}
+.small{font-size:14px;color:#aebfe8;margin-top:12px}
+.shot{border-radius:14px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.15);transform:perspective(1600px) rotateY(-7deg) rotateX(2deg)}
+.shot img{display:block;width:100%}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.badges span{padding:6px 14px;border-radius:99px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);font-size:14px;font-weight:600}
+section{padding:80px 0 0}
+h2{font-size:clamp(30px,4vw,46px);letter-spacing:-1px;text-align:center}
+.lead{text-align:center;color:var(--mut);font-size:19px;margin:8px auto 40px;max-width:640px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
+.card .ic{font-size:30px}.card h3{margin:8px 0 6px;font-size:21px}.card p{color:var(--mut);font-size:16px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:22px}
+.gal figure{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:14px;box-shadow:0 14px 40px rgba(30,60,130,.12)}
+.gal img{width:100%;border-radius:10px;display:block;height:260px;object-fit:cover;object-position:top}
+.gal figcaption{padding:12px 6px 4px;font-weight:700}.gal figcaption small{display:block;font-weight:400;color:var(--mut)}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+th{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#fff;text-align:left;padding:14px 20px}
+td{padding:14px 20px;border-top:1px solid var(--line)}td:first-child{font-weight:700;color:var(--acc);white-space:nowrap}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;counter-reset:s}
+.steps .card{position:relative;padding-top:38px}.steps .card:before{counter-increment:s;content:counter(s);position:absolute;top:-16px;left:22px;width:38px;height:38px;border-radius:50%;background:var(--acc);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+code{background:rgba(47,123,255,.12);padding:2px 7px;border-radius:6px;font-size:.92em}
+.cta{margin-top:90px;background:linear-gradient(135deg,#0a1538,#1b3e9a);color:#fff;border-radius:32px;padding:60px 24px;text-align:center}
+.cta h2{color:#fff}.cta p{color:#c9d8ff;margin:10px 0 26px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:12px}
+summary{font-weight:700;cursor:pointer}details p{color:var(--mut);margin-top:8px}
+footer{padding:50px 0;text-align:center;color:var(--mut);font-size:14px}
+@media(max-width:860px){.hero .grid{grid-template-columns:1fr}.shot{transform:none}nav .links a:not(:last-child){display:none}}
+</style></head><body>
+<header class="hero"><div class="wrap">
+<nav><a class="brand" href="#"><img src="assets/icon.png" alt="">WordCraft</a><div class="links"><a href="#features">Features</a><a href="#install">Install</a><a href="https://github.com/uaedoom/wordcraft">GitHub</a></div></nav>
+<div class="grid"><div>
+<img class="app" src="assets/icon.png" alt="WordCraft icon">
+<h1>Word<span>Craft</span></h1>
+<p class="tag">The free, open-source word processor for your Mac. Real pages, real power, no subscription.</p>
+<div class="btns"><a class="btn p" href="https://github.com/uaedoom/wordcraft/releases/download/v1.0.0/WordCraft-1.0.dmg">⬇ Download for Mac (.dmg)</a><a class="btn s" href="https://github.com/uaedoom/wordcraft">★ View on GitHub</a></div>
+<p class="small">Version 1.0 · 3.3 MB · macOS 15+ · Apple silicon</p>
+<div class="badges"><span>.docx ready</span><span>English + العربية</span><span>MIT / Apache-2.0</span><span>No account · No tracking</span></div>
+</div><div class="shot"><img src="assets/page-view.png" alt="WordCraft editing a document"></div></div>
+</div></header>
+
+<main class="wrap">
+<section id="features"><h2>Everything you need to write</h2><p class="lead">A full-featured word processor, built natively for macOS.</p>
+<div class="cards">
+<div class="card"><div class="ic">📄</div><h3>Real pages</h3><p>Page view with margins, columns, sections, headers, footers and footnotes at the bottom of the page.</p></div>
+<div class="card"><div class="ic">🎨</div><h3>Styles &amp; structure</h3><p>Style gallery, navigation pane, table of contents, captions, cross-references and an index.</p></div>
+<div class="card"><div class="ic">🖼️</div><h3>Pictures, tables, equations</h3><p>Floating pictures with text wrap, shapes, text boxes, tables with formulas, and equations.</p></div>
+<div class="card"><div class="ic">✍️</div><h3>Review together</h3><p>Track changes, comments with replies, compare documents and restrict editing.</p></div>
+<div class="card"><div class="ic">📚</div><h3>Research tools</h3><p>Citations and bibliography in APA, MLA, Chicago and IEEE. Mail merge from CSV.</p></div>
+<div class="card"><div class="ic">🌍</div><h3>Arabic &amp; RTL</h3><p>Full Arabic interface and right-to-left editing, with mixed-direction text handled correctly.</p></div>
+<div class="card"><div class="ic">🔁</div><h3>Opens your Word files</h3><p>Open and export .docx, plus RTF, HTML, text and PDF export.</p></div>
+<div class="card"><div class="ic">⚙️</div><h3>Automation</h3><p>AppleScript and Shortcuts actions, templates, content controls and forms.</p></div>
+</div></section>
+
+<section><h2>See it in action</h2><p class="lead">Real screenshots from WordCraft 1.0.</p>
+<div class="gal">
+<figure><img src="assets/start-screen.png" alt="Start screen"><figcaption>Start screen<small>Templates and recent documents</small></figcaption></figure>
+<figure><img src="assets/pictures-equations.png" alt="Pictures and equations"><figcaption>Pictures &amp; equations<small>Text wrap around floating objects</small></figcaption></figure>
+<figure><img src="assets/track-changes.png" alt="Track changes"><figcaption>Track changes<small>Insertions, deletions and comments</small></figcaption></figure>
+<figure><img src="assets/arabic-rtl.png" alt="Arabic interface"><figcaption>Arabic &amp; right-to-left<small>Mirrored ribbon and RTL text</small></figcaption></figure>
+</div></section>
+
+<section><h2>What's included</h2><p class="lead">Free forever — and the source code is yours to read.</p>
+<table><tr><th>Area</th><th>What you get</th></tr>
+<tr><td>Real pages</td><td>Page view, columns, sections, headers &amp; footers, footnotes</td></tr>
+<tr><td>Styles</td><td>Style gallery, editable styles, navigation pane, table of contents</td></tr>
+<tr><td>Objects</td><td>Pictures with text wrap, shapes, text boxes, tables, equations</td></tr>
+<tr><td>Review</td><td>Track changes, comments, compare documents, restrict editing</td></tr>
+<tr><td>Research</td><td>Citations &amp; bibliography, index, captions</td></tr>
+<tr><td>Automation</td><td>Mail merge, templates, AppleScript, Shortcuts</td></tr>
+<tr><td>Files</td><td>Open .docx, RTF, HTML, text · Export .docx, PDF, RTF</td></tr>
+<tr><td>Privacy</td><td>Sandboxed, no account, no tracking, MIT / Apache-2.0</td></tr></table></section>
+
+<section id="install"><h2>Install in 3 steps</h2><p class="lead">It takes less than a minute.</p>
+<div class="steps">
+<div class="card"><h3>Download</h3><p>Get <b>WordCraft-1.0.dmg</b> using the button above.</p></div>
+<div class="card"><h3>Drag to Applications</h3><p>Open the DMG and drag the WordCraft icon onto the Applications folder.</p></div>
+<div class="card"><h3>Open it</h3><p>The first time, <b>right-click</b> WordCraft and choose <b>Open</b>, then confirm. (The app isn't notarized yet, so macOS asks once.)</p></div>
+</div></section>
+
+<section><h2>Questions</h2><p class="lead"></p>
+<details><summary>Is it really free?</summary><p>Yes. WordCraft is open source under the MIT or Apache-2.0 license. There are no ads, accounts or subscriptions.</p></details>
+<details><summary>Can it open my Word documents?</summary><p>Yes, it opens .docx files and exports .docx and PDF. Complex Word content such as SmartArt and charts is skipped for now, and page breaks may differ slightly.</p></details>
+<details><summary>Why does macOS warn me?</summary><p>The app is signed ad hoc and isn't notarized by Apple yet. Right-click the app and choose Open the first time. You can verify the download with the SHA-256 checksum on the release page.</p></details>
+<details><summary>Which Macs are supported?</summary><p>macOS 15 or newer, on Apple silicon Macs (M1 and newer). An Intel build is not available yet.</p></details>
+<details><summary>Is it from Microsoft?</summary><p>No. WordCraft is independent and not affiliated with or endorsed by Microsoft.</p></details>
+</section>
+
+<div class="cta"><h2>Write something great.</h2><p>Download WordCraft for Mac — free and open source.</p>
+<a class="btn p" href="https://github.com/uaedoom/wordcraft/releases/download/v1.0.0/WordCraft-1.0.dmg">⬇ Download WordCraft 1.0</a></div>
+</main>
+<footer><div class="wrap">WordCraft is dual-licensed MIT / Apache-2.0 · <a href="https://github.com/uaedoom/wordcraft">Source on GitHub</a> · <a href="https://github.com/uaedoom/wordcraft/releases">All releases</a> · <a href="https://github.com/uaedoom/wordcraft/issues">Report a bug</a><br>“Microsoft” and “Word” are trademarks of Microsoft Corporation. WordCraft is not affiliated with Microsoft.</div></footer>
+</body></html>

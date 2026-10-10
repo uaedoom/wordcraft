@@ -1,4 +1,8 @@
-<p align="center"><img src="docs/images/banner.jpg" alt="WordCraft: the free, open-source word processor for your Mac"></p>
+<p align="center"><a href="https://uaedoom.github.io/wordcraft/"><img src="docs/images/banner.jpg" alt="WordCraft: the free, open-source word processor for your Mac"></a></p>
+
+<p align="center">
+<a href="https://github.com/uaedoom/wordcraft/releases/download/v1.0.0/WordCraft-1.0.dmg"><b>⬇ Download WordCraft 1.0 (.dmg)</b></a> &nbsp;·&nbsp; <a href="https://uaedoom.github.io/wordcraft/"><b>🌐 Website</b></a> &nbsp;·&nbsp; <a href="https://github.com/uaedoom/wordcraft/releases">All releases</a>
+</p>
 
 <p align="center">
 <img alt="macOS 15+" src="https://img.shields.io/badge/macOS-15%2B-blue"> <img alt="Swift" src="https://img.shields.io/badge/Swift-5-orange"> <img alt="License" src="https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-green"> <img alt="Status" src="https://img.shields.io/badge/status-early%20release-yellow">
@@ -47,7 +51,7 @@ open build/Build/Products/Debug/WordCraft.app
 
 ## Downloads
 
-Prebuilt disk images are published on the [Releases](../../releases) page with a `SHA256SUMS.txt` file. The app is signed with an ad-hoc signature only, so macOS shows an "unidentified developer" warning the first time: right-click the app and choose **Open**.
+Download from the [WordCraft website](https://uaedoom.github.io/wordcraft/) or the [Releases](../../releases) page (direct link: [WordCraft-1.0.dmg](https://github.com/uaedoom/wordcraft/releases/download/v1.0.0/WordCraft-1.0.dmg)). The DMG runs on Apple silicon Macs with macOS 15+. Each release includes a `SHA256SUMS.txt` file. The app is signed with an ad-hoc signature only, so macOS shows an "unidentified developer" warning the first time: right-click the app and choose **Open**.
 
 ## Automation
 
