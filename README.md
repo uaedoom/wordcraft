@@ -1,21 +1,14 @@
-<div align="center">
+<p align="center"><img src="docs/images/banner.jpg" alt="WordCraft: the free, open-source word processor for your Mac"></p>
 
-<img src="WordMac/Assets.xcassets/AppIcon.appiconset/icon_256x256@2x.png" width="128" alt="WordCraft icon">
+<p align="center">
+<img alt="macOS 15+" src="https://img.shields.io/badge/macOS-15%2B-blue"> <img alt="Swift" src="https://img.shields.io/badge/Swift-5-orange"> <img alt="License" src="https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-green"> <img alt="Status" src="https://img.shields.io/badge/status-early%20release-yellow">
+</p>
 
-# WordCraft
-
-**An open-source word processor for the Mac, written in Swift.**
-Real page layout, styles, tables, equations, track changes, citations, mail merge, `.docx` import/export, and full Arabic / right-to-left support.
-
-![macOS 15+](https://img.shields.io/badge/macOS-15%2B-blue) ![Swift](https://img.shields.io/badge/Swift-5-orange) ![License](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-green) ![Status](https://img.shields.io/badge/status-early%20release-yellow)
-
-</div>
-
-<p align="center"><img src="docs/images/page-view.png" width="860" alt="WordCraft page view with the Home ribbon"></p>
-
-WordCraft is a native macOS app (SwiftUI + AppKit/TextKit). It is **not affiliated with Microsoft**; it reads and writes the open Office Open XML (`.docx`) format and borrows the familiar ribbon-style layout. It contains no Microsoft code or assets.
+WordCraft is a native macOS app (SwiftUI + AppKit/TextKit) with real page layout, styles, tables, equations, track changes, citations, mail merge, `.docx` import/export, and full Arabic / right-to-left support. It is **not affiliated with Microsoft**; it reads and writes the open Office Open XML (`.docx`) format and borrows the familiar ribbon-style layout. It contains no Microsoft code or assets.
 
 > **Status:** early release. It is usable for everyday writing, but it is not yet a full replacement for Microsoft Word. See [Known limits](#known-limits).
+
+<p align="center"><img src="docs/images/story.jpg" alt="From blank page to finished document in four steps"></p>
 
 ## What's in the box
 
@@ -30,29 +23,7 @@ WordCraft is a native macOS app (SwiftUI + AppKit/TextKit). It is **not affiliat
 | **Files** | Native `.wmdoc` package; opens `.docx`/`.dotx`, RTF, text and HTML; exports `.docx`, PDF, RTF, HTML, text; autosave and Versions from macOS |
 | **Mac polish** | Arabic and English UI (right-to-left mirroring), VoiceOver labels, Focus Mode, Touch Bar, Settings, start screen with templates and recents |
 
-<table>
-<tr>
-<td><img src="docs/images/start-screen.png" alt="Start screen"></td>
-<td><img src="docs/images/arabic-rtl.png" alt="Arabic right-to-left interface"></td>
-</tr>
-<tr>
-<td align="center">Start screen: templates, recents, favorites</td>
-<td align="center">Arabic UI and right-to-left text</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td><img src="docs/images/pictures-equations.png" alt="Pictures and equations"></td>
-<td><img src="docs/images/track-changes.png" alt="Track changes markup"></td>
-<td><img src="docs/images/floating-objects.png" alt="Floating picture and shape with text wrap"></td>
-</tr>
-<tr>
-<td align="center">Pictures & equations</td>
-<td align="center">Track changes & comments</td>
-<td align="center">Floating objects & text wrap</td>
-</tr>
-</table>
+<p align="center"><img src="docs/images/table.jpg" alt="Everything included in WordCraft 1.0"></p>
 
 ## Get started
 
