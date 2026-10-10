@@ -1,0 +1,20 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate project
+        run: xcodegen generate
+      - name: Build (Debug, unsigned)
+        run: |
+          xcodebuild -project WordMac.xcodeproj -scheme WordMac -configuration Debug \
+            -derivedDataPath build CODE_SIGNING_ALLOWED=NO build | tail -20

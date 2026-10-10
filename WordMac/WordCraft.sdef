@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="WordCraft Terminology">
+    <suite name="WordCraft Suite" code="WCft" description="Commands for working with the front WordCraft document.">
+        <command name="get document text" code="WCftGetT" description="Return the text of the front document.">
+            <cocoa class="WCGetTextCommand"/>
+            <result type="text" description="The document text."/>
+        </command>
+        <command name="insert text" code="WCftInsT" description="Insert text at the cursor.">
+            <cocoa class="WCInsertTextCommand"/>
+            <direct-parameter type="text" description="The text to insert."/>
+        </command>
+        <command name="append text" code="WCftAppT" description="Add text to the end of the document.">
+            <cocoa class="WCAppendTextCommand"/>
+            <direct-parameter type="text" description="The text to add."/>
+        </command>
+        <command name="replace text" code="WCftRepl" description="Replace every occurrence of some text.">
+            <cocoa class="WCReplaceTextCommand"/>
+            <direct-parameter type="text" description="The text to find."/>
+            <parameter name="with" code="WCwt" type="text" description="The replacement text.">
+                <cocoa key="with"/>
+            </parameter>
+            <parameter name="case sensitive" code="WCcs" type="boolean" optional="yes" description="Match case (default no).">
+                <cocoa key="caseSensitive"/>
+            </parameter>
+            <result type="integer" description="How many replacements were made."/>
+        </command>
+        <command name="apply style" code="WCftStyl" description="Apply a paragraph style (e.g. Heading 1) to the selected paragraphs.">
+            <cocoa class="WCApplyStyleCommand"/>
+            <direct-parameter type="text" description="The style name."/>
+        </command>
+        <command name="count words" code="WCftWrdC" description="Return the number of words in the document.">
+            <cocoa class="WCWordCountCommand"/>
+            <result type="integer"/>
+        </command>
+        <command name="update fields" code="WCftUpdF" description="Update the table of contents, captions, citations, cross-references and index.">
+            <cocoa class="WCUpdateFieldsCommand"/>
+        </command>
+        <command name="set tracking" code="WCftTrkC" description="Turn Track Changes on or off.">
+            <cocoa class="WCTrackChangesCommand"/>
+            <direct-parameter type="boolean" description="True to track changes."/>
+        </command>
+        <command name="resolve all changes" code="WCftRslv" description="Accept or reject every tracked change.">
+            <cocoa class="WCReviewAllCommand"/>
+            <direct-parameter type="boolean" description="True to accept, false to reject."/>
+        </command>
+        <command name="create document" code="WCftNewD" description="Create a new document, optionally with starting text.">
+            <cocoa class="WCNewDocumentCommand"/>
+            <direct-parameter type="text" optional="yes" description="Starting text."/>
+        </command>
+        <command name="export document" code="WCftExpt" description="Export the document as docx, pdf, rtf or txt.">
+            <cocoa class="WCExportCommand"/>
+            <direct-parameter type="text" description="Destination path."/>
+            <parameter name="format" code="WCfm" type="text" description="docx, pdf, rtf or txt.">
+                <cocoa key="format"/>
+            </parameter>
+        </command>
+    </suite>
+</dictionary>

@@ -1,0 +1,16 @@
+# Generated / build output
+build/
+build-release/
+DerivedData/
+*.xcodeproj
+WordMac/Info.plist
+WordMac/WordMac.entitlements
+dist/stage/
+dist/*.dmg
+dist/*.tiff
+*.xcuserstate
+xcuserdata/
+.DS_Store
+# Local test artifacts
+scratchpad/
+*.log
